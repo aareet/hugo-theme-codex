@@ -22,19 +22,3 @@
     50% { border-color: orange }
   }
 
-  .social-icons {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-icons__icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 24px;
-  
-    &:not(:last-child) {
-      margin-right: 3em;
-    }
-  }
