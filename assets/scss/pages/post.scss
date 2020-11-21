@@ -1,6 +1,5 @@
 @import "../main";
 @import "../partials/github-syntax-highlighting";
-@import "../partials/colors";
 
 $tocBreakpoint: 1024px;
 
@@ -11,6 +10,7 @@ $tocBreakpoint: 1024px;
 
 .post__container {
   flex-grow: 1;
+  min-width: 0;
 }
 
 .post {
@@ -24,6 +24,7 @@ $tocBreakpoint: 1024px;
     padding-top: 10px;
 
     .anchor {
+      top: 0.5rem;
       text-decoration: none;
       position: absolute;
       left: -1rem;
@@ -77,9 +78,7 @@ $tocBreakpoint: 1024px;
   max-width: 350px;
 
   @media screen and (max-width: $tocBreakpoint) {
-    visibility: hidden;
-    width: 0;
-    margin: 0;
+    display: none;
   }
 }
 
@@ -194,7 +193,7 @@ $tocBreakpoint: 1024px;
 footer {
   text-align: center;
   padding: 0 1.5rem;
-  background: #ffffff;
+  background: $white;
 
   p {
     margin-top: 1rem; // reduce margin top due to social icons' padding

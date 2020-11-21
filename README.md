@@ -73,22 +73,22 @@ Social Icons are optional. To show any of these icons, just provide the value in
   github = "https://github.com/jakewies/hugo-theme-codex"
   # ...
 
-  iconTitles = ["Twitter", "GitHub"]
+  iconOrder = ["Twitter", "GitHub"]
 ```
 
-If any of these options are given, `hugo-theme-codex` will render the social icon in the footer, using the order specified in `iconTitles`.
+If any of these options are given, `hugo-theme-codex` will render the social icon in the footer, using the order specified in `iconOrder`.
 
 See the contents of the [example site](https://github.com/jakewies/hugo-theme-codex/tree/master/exampleSite) for more details.
 
 You can also create additional social icons by:
-1. Adding your own SVGs in `static/images/social/`, for example `static/images/social/reddit.svg`.
+1. Adding your own SVGs in `static/svg/`, for example `static/svg/reddit.svg`.
 2. Modifying your site's config as follows:
    ```toml
    [params]
       # ...
       reddit = "<url to your reddit>"
    
-      iconTitles = [ "...", "Reddit"]
+      iconOrder = ["Reddit"]
    ```
 
 Make sure that the icon title must match the icon's file name. If the title contains more than one word, say "My Awesome Site",
@@ -132,6 +132,19 @@ toc: false
 
 The frontmatter above is the default for a new post, but all values can be changed.
 
+### Configuring Table of Contents in blog posts
+
+To display post title in Table of Contents in blog posts, set `showPageTitleInTOC`
+to `true` in the `[params]` section of `config.toml`.
+
+```toml
+# config.toml
+
+[params]
+  # ...
+  showPageTitleInTOC = true
+```
+
 ### Adding a new section menu
 
 In your site's `config.toml`, add a new menu definition for say, "photos":
@@ -149,8 +162,7 @@ Then, put your posts under "content/photos".
 
 ### Custom styling
 
-In your site's folder, create `assets/scss/custom.scss` and put your custom styling there. For example, the snippet below 
-changes the dot's color on your About page to blue:
+You have two options for custom styling. The first is to create an `assets/scss/custom.scss` in your project and put your custom styling there. For example, the snippet below changes the dot's color on your About page to blue:
 
 ```scss
 // custom.scss
@@ -174,6 +186,15 @@ You can even use Hugo variables/params in your custom styles too!
     fancy = "#f06292"
 ```
 
+The second option is to use the supported scss overrides. You can do this by creating an `assets/scss/overrides/scss` file in your project. The following overrides are supported:
+
+```scss
+// overrides.scss
+
+// The primary accent color used throughout the site
+$primary: ''
+```
+
 ### Tags
 
 Right now `hugo-theme-codex` uses the `tags` taxonomy for blog posts. You can view all the blog posts of a given tag by going to `/tags/:tag-name`, where `:tag-name` is the name of your tag.
@@ -189,7 +210,7 @@ Check out the [CONTRIBUTORS.md file](https://github.com/jakewies/hugo-theme-code
 ## Contributors ✨
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -209,6 +230,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://www.aareet.com"><img src="https://avatars1.githubusercontent.com/u/33654?v=4" width="100px;" alt=""/><br /><sub><b>Aareet Shermon</b></sub></a><br /><a href="#design-aareet" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/dgnicholson"><img src="https://avatars1.githubusercontent.com/u/6208288?v=4" width="100px;" alt=""/><br /><sub><b>dgnicholson</b></sub></a><br /><a href="#design-dgnicholson" title="Design">🎨</a> <a href="https://github.com/jakewies/hugo-theme-codex/commits?author=dgnicholson" title="Code">💻</a></td>
+    <td align="center"><a href="https://msfjarvis.dev"><img src="https://avatars0.githubusercontent.com/u/13348378?v=4" width="100px;" alt=""/><br /><sub><b>Harsh Shandilya</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=msfjarvis" title="Code">💻</a></td>
+    <td align="center"><a href="https://twitter.com/ProfessorLogout"><img src="https://avatars3.githubusercontent.com/u/13572444?v=4" width="100px;" alt=""/><br /><sub><b>Marco Kamner</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=ProfessorLogout" title="Code">💻</a></td>
+    <td align="center"><a href="https://ewen.io/"><img src="https://avatars3.githubusercontent.com/u/10872821?v=4" width="100px;" alt=""/><br /><sub><b>ewen</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=ewenme" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/SanchithHegde"><img src="https://avatars2.githubusercontent.com/u/22217505?v=4" width="100px;" alt=""/><br /><sub><b>Sanchith Hegde</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=SanchithHegde" title="Code">💻</a> <a href="https://github.com/jakewies/hugo-theme-codex/commits?author=SanchithHegde" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://soeren.codes"><img src="https://avatars1.githubusercontent.com/u/5760400?v=4" width="100px;" alt=""/><br /><sub><b>Sören Johanson</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=CER10TY" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/jdl031"><img src="https://avatars3.githubusercontent.com/u/1720477?v=4" width="100px;" alt=""/><br /><sub><b>James Lloyd</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=jdl031" title="Code">💻</a></td>
+    <td align="center"><a href="http://wilsonehusin.com"><img src="https://avatars1.githubusercontent.com/u/14004487?v=4" width="100px;" alt=""/><br /><sub><b>Wilson E. Husin</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=wilsonehusin" title="Code">💻</a></td>
+    <td align="center"><a href="https://tommorris.org/"><img src="https://avatars0.githubusercontent.com/u/175?v=4" width="100px;" alt=""/><br /><sub><b>Tom Morris</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=tommorris" title="Code">💻</a></td>
+    <td align="center"><a href="http://twitter.com/sdil"><img src="https://avatars0.githubusercontent.com/u/461537?v=4" width="100px;" alt=""/><br /><sub><b>Mohamad Fadhil</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=sdil" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/skvale"><img src="https://avatars0.githubusercontent.com/u/5314713?v=4" width="100px;" alt=""/><br /><sub><b>Sam Kvale</b></sub></a><br /><a href="https://github.com/jakewies/hugo-theme-codex/commits?author=skvale" title="Code">💻</a></td>
   </tr>
 </table>
 
