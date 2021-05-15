@@ -12,7 +12,7 @@
     <span class="handle">@{{ .Params.handle }}</span>
     {{ end }}
     <h2>
-      {{ .Params.subheading }}
+      {{ .Params.subheading | markdownify }}
     </h2>
     <!-- Replace MEEEEE -->
 
