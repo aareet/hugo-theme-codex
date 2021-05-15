@@ -22,3 +22,14 @@
     50% { border-color: orange }
   }
 
+/* Change link colour and behaviour */
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+ 
+#{$a-tags} {
+  color: orange;
+  text-decoration: none;
+}
+#{$a-tags-hover} {
+  color: blue;
+}
