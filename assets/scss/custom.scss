@@ -19,7 +19,7 @@
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: green }
   }
 
 /* Change link colour and behaviour */
@@ -27,9 +27,9 @@ $a-tags: 'a, a:active, a:hover, a:visited';
 $a-tags-hover: 'a:active, a:hover';
  
 #{$a-tags} {
-  color: orange;
+  color: green;
   text-decoration: none;
 }
 #{$a-tags-hover} {
-  color: blue;
+  color: orange;
 }
