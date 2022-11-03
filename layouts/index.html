@@ -5,19 +5,16 @@
 {{ define "main" }}
 
 <div class="splash-container">
- <!-- DISABLE TYPEWRITER <div class="splash typewriter"> -->
-    
-    <h1>{{ .Params.heading }}</h1>
-    {{ if isset .Params "handle" }}
-    <span class="handle">@{{ .Params.handle }}</span>
-    {{ end }}
-    <h2>
-      {{ .Params.subheading | markdownify }}
-    </h2>
-    <!-- Replace MEEEEE -->
-
-    {{ partial "social-icons.html" .}}
- <!-- DISABLE TYPEWRITER </div> -->
+    <div class="splash">
+        <h1>{{ .Params.heading }}</h1>
+        {{ if isset .Params "handle" }}
+        <span class="handle">@{{ .Params.handle }}</span>
+        {{ end }}
+        <h2>
+          {{ .Params.subheading | markdownify }}
+        </h2>
+        {{ partial "social-icons.html" .}}
+    </div>
 </div>
 
 {{ end }}
