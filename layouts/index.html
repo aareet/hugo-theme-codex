@@ -5,7 +5,7 @@
 {{ define "main" }}
 
 <div class="splash-container">
-  <div class="splash typewriter">
+ <!-- DISABLE TYPEWRITER <div class="splash typewriter"> -->
     
     <h1>{{ .Params.heading }}</h1>
     {{ if isset .Params "handle" }}
@@ -17,7 +17,7 @@
     <!-- Replace MEEEEE -->
 
     {{ partial "social-icons.html" .}}
-  </div>
+ <!-- DISABLE TYPEWRITER </div> -->
 </div>
 
 {{ end }}
