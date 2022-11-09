@@ -9,6 +9,7 @@
 
 
 <div class="splash-container">
+    <div class="splash">
     <svg viewbox="0 0 700 225">
         <clipPath id="textClip" class="filled-heading">
             <text y="70">{{ .Params.headingl1}}</text>
@@ -89,10 +90,9 @@
         {{ if isset .Params "handle" }}
         <span class="handle">@{{ .Params.handle }}</span>
         {{ end }}
-        <h2>
-          {{ .Params.subheading | markdownify }}
-        </h2>
+        {{ .Params.subheading | markdownify }}
         {{ partial "social-icons.html" .}}
+    </div>
 </div>
 
 {{ end }}
