@@ -54,6 +54,7 @@ main {
 }
 
 .social-icons {
+  display: inline-block;
   justify-content: flex-start;
   padding-top: 1rem;
   margin-left: -0.8rem;  // offset to negate icon's padding to align with text above
