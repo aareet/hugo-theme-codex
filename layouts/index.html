@@ -9,6 +9,7 @@
 
 
 <div class="splash-container">
+    <div class="splash">
             <svg viewbox="0 0 700 225">
                 <clipPath id="textClip" class="filled-heading">
                     <text y="70">{{ .Params.headingl1}}</text>
@@ -87,7 +88,6 @@
             Removed the default homepage header in favour of the colourblocks!
         -->
         {{ if isset .Params "handle" }}
-    <div class="splash">
         <span class="handle">@{{ .Params.handle }}</span>
         {{ end }}
         <h2>{{ .Params.subheading | markdownify }}</h2>
