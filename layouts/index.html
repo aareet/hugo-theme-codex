@@ -90,9 +90,9 @@
         {{ if isset .Params "handle" }}
         <span class="handle">@{{ .Params.handle }}</span>
         {{ end }}
-        <h3>
+        <h2>
           {{ .Params.subheading | markdownify }}
-        </h3>
+        </h2>
         {{ partial "social-icons.html" .}}
     </div>
 </div>
