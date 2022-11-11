@@ -79,7 +79,7 @@
         <span class="handle">@{{ .Params.handle }}</span>
         {{ end }}
         -->
-        <text>{{ .Params.subheading | markdownify }}</text>
+        <text class="post__content">{{ .Params.subheading | markdownify }}</text>
         {{ partial "social-icons.html" .}}
     </div>
 </div>

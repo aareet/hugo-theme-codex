@@ -63,7 +63,7 @@ blobs[0].addEventListener("animationiteration", nextIteration);
 colorBlobs();
 */
 
-const colors = ['#f5a147','#51cad8','#112b39'];
+const colors = ['#E27D60','#85DCB','#E8A87C','#C38D9E','#41B3A3'];
 var blobs = document.querySelectorAll("#background path");
 
 blobs.forEach(blob => {
