@@ -8,9 +8,9 @@
     <div class="splash">
         <svg viewbox="0 0 700 225">
             <clipPath id="text" class="filled-heading">
-                <text y="70" x="50%">{{ .Params.headingl1}}</text>
-                <text y="140" x="50%">{{.Params.headingl2}}</text>
-                <text y="210" x="50%">{{.Params.headingl3}}</text>
+                <text y="70">{{ .Params.headingl1}}</text>
+                <text y="140">{{.Params.headingl2}}</text>
+                <text y="210">{{.Params.headingl3}}</text>
             </clipPath>
             
             <g id="background" clip-path="url(#text)">
@@ -79,7 +79,7 @@
         <span class="handle">@{{ .Params.handle }}</span>
         {{ end }}
         -->
-        <h4>{{ .Params.subheading | markdownify }}</h4>
+        <text>{{ .Params.subheading | markdownify }}</text>
         {{ partial "social-icons.html" .}}
     </div>
 </div>
