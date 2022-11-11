@@ -20,7 +20,7 @@ initBurger();
 
 /*
  * Colourblocks
- */
+ 
 
 const colors = ['#f5a147','#51cad8','#112b39'];
 const numLines = 3;
@@ -61,3 +61,11 @@ function nextIteration() {
 blobs[0].addEventListener("animationiteration", nextIteration);
 
 colorBlobs();
+*/
+
+const colors = ['#f5a147','#51cad8','#112b39'];
+var blobs = document.querySelectorAll("#background path");
+
+blobs.forEach(blob => {
+    blob.style.fill = colors[Math.floor(Math.random() * colors.length)];
+});

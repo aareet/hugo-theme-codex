@@ -37,6 +37,7 @@
   {{- end -}}
   <style>
     /* ColourBlobs */
+    /* Basic styling */
     svg {
         width: 100%;
     }
@@ -47,21 +48,21 @@
         line-height: 0.9;
     }
 
+    /* Animate the background shapes */
     #background path {
-        animation: pulse 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
         transform-origin: 50% 50%;
         transform-box: fill-box;
     }
-    #textClip text {
-        display: none;
+    #background path:nth-of-type(2n) {
+        animation: rotate 20s linear infinite;
     }
-    #textClip text:nth-of-type(n + 1):nth-of-type(-n + 3) {
-        display: inline;
+    #background path:nth-of-type(2n + 1) {
+        animation: rotate 30s linear reverse infinite;
     }
 
-    @keyframes pulse {
-        0%, 100% { transform: scale(0) rotate(33deg); }
-        35%, 65% { transform: scale(1) rotate(0deg); }
+    @keyframes rotate {
+        0% { transform: rotate(0); }
+        100% { transform: rotate(360deg); }
     }
 </style>
 
