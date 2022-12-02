@@ -12,7 +12,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  {{ partial "favicon.html" }}
+  {{ partial "favicon.html" }}  
 
   <!-- Styles -->
   {{ block "styles" . }} {{ end }} <!-- Get "style_opts" variable from "styles" block -->
@@ -43,7 +43,7 @@
     }
     .filled-heading {
         text-transform: uppercase;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Bodoni 72', 'Source Sans Pro', sans-serif;
         font-size: 5em;
         line-height: 0.9;
     }
@@ -70,18 +70,17 @@
 
 <body>
   {{ partial "burger.html" .}} 
-
   {{ partial "nav.html" .}}
-
+  
   <main>
     {{ block "main" . }} {{ end }}
   </main>
-
   {{ block "footer" . }} {{ end }}
 
   {{ $script := resources.Get "js/index.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity | safeHTMLAttr }}" crossorigin="anonymous"></script>
   {{ block "scripts" . }} {{ end }}
+  
 </body>
 
 </html>
