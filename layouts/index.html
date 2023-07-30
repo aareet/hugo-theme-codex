@@ -6,7 +6,7 @@
 
 <div class="splash-container ">
     <div class="splash"> 
-        <div class="typewriter"><h1>{{ .Params.heading }}</h1></div>
+        <h1>{{ .Params.heading }}</h1>
         {{ if isset .Params "handle" }}        
         <span class="handle">@{{ .Params.handle }}</span>
         {{ end }}
