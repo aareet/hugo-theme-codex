@@ -1,7 +1,15 @@
+{{ define "styles" }}
+    {{ $.Scratch.Set "style_opts" (dict "src" "scss/pages/post.scss" "dest" "css/post.css") }}
+{{ end }}
+
 {{ define "main" }}
 <article>
-  <h1>
-    This is not the page you were looking for. Return <a href="https://aareet.com">home</a>.
-  </h1>
+  <div class="splash-container ">
+    <div class="splash">
+    <h2>
+      This is not the page you were looking for. Return <a href="{{.Site.BaseURL}}">home</a>.
+    </h2>
+    </div>
+  </div>
 </article>
 {{ end }}
