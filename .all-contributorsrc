@@ -186,6 +186,43 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "macxcool",
+      "name": "Mark C",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2531654?v=4",
+      "profile": "https://github.com/macxcool",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rbnis",
+      "name": "Robin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5955614?v=4",
+      "profile": "https://rbn.is",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "gprst",
+      "name": "gprst",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32643653?v=4",
+      "profile": "https://github.com/gprst",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "altescape",
+      "name": "Michael Watts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/811806?v=4",
+      "profile": "http://michaelwatts.me",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
