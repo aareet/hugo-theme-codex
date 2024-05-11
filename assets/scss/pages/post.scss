@@ -173,9 +173,6 @@ $tocBreakpoint: 1024px;
     &:last-of-type {
       margin-top: 0;
     }
-    &:hover {
-      background-color: #f6f9fc;
-    }
   }
 }
 
@@ -185,9 +182,17 @@ $tocBreakpoint: 1024px;
 }
 
 .pagination__title {
-  color: $black;
+  color: green;
   font-weight: 700;
   margin-top: 0.25rem;
+
+  &.active {
+    color: orange;
+  }
+
+  &:hover {
+    color: orange;
+  }
 }
 
 footer {

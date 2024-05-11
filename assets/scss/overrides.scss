@@ -2,3 +2,19 @@
 
 // The primary accent color can take any css color property, including hex, named props, rgba etc.
 // $primary:
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body, body main *, nav {
+        background: rgb(45, 45, 45);
+        color: #f5f5f5;
+    }
+}

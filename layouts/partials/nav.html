@@ -1,6 +1,7 @@
 <nav class="nav" id="navigation">
   <ul class="nav__list">
     {{ $currentPage := . }}
+    
     {{ range .Site.Menus.main }}
       <li>
         <a {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} class="active"

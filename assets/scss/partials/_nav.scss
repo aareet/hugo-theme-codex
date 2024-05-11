@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $white;
   visibility: hidden;
   z-index: 1;
 
@@ -64,16 +63,15 @@
 }
 
 .nav__list a {
-  color: $grey;
   text-decoration: none;
   font-size: 2em;
 
   &.active {
-    color: $black;
+    color: orange;
   }
 
   &:hover {
-    color: $black;
+    color: orange;
   }
 
   @media screen and (min-width: $medium) {
