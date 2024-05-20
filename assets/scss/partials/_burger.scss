@@ -23,7 +23,7 @@
   position: absolute;
   width: $meatWidth;
   height: $meatHeight;
-  background: $black;
+  background: green;
   top: calc(50% - #{$meatHeight} / 2);
   left: calc(50% - #{$meatWidth} / 2);
   transition: all 150ms ease-in;
